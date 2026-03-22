@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELITE DRIVE | Luxury Car Rental</title>
+    <title>DUBAI DRIVE LUXURY | Premium Rental</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -12,15 +12,23 @@
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f9e29a 50%, #b8860b 100%); }
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%); }
+        
+        /* Had l-code bach l-logo jpg maybanich b7al sora mostatila */
+        .logo-style { 
+            mix-blend-mode: screen; /* Ila kant khalfya d logo k7la ghadi t-ghber */
+            /* mix-blend-mode: multiply; */ /* Ila kant khalfya d logo bida, 7iyd li l-fo9 w khdem b hadi */
+            object-fit: contain;
+            border-radius: 50%; /* Bach ibane dayer */
+        }
     </style>
 </head>
 <body>
 
     <!-- Header / Navbar -->
     <nav class="fixed w-full z-50 px-6 md:px-16 py-4 flex justify-between items-center bg-black/40 backdrop-blur-md border-b border-white/5">
-        <!-- Logo Section - Updated to logo.jpg -->
         <div class="flex items-center">
-            <img src="logo.jpg" alt="Elite Drive Logo" class="h-12 md:h-20 w-auto object-contain block"> 
+            <!-- Logo Updated -->
+            <img src="logo.jpg" alt="Logo" class="h-14 md:h-20 w-14 md:w-20 logo-style"> 
         </div>
         
         <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-light">
@@ -38,9 +46,9 @@
         <div class="absolute inset-0 hero-overlay z-10"></div>
 
         <div class="relative z-20 px-6 md:px-24 max-w-4xl">
-            <h1 class="text-5xl md:text-8xl luxury-serif leading-tight mb-6">Drive The <br> <span class="text-[#d4af37] italic font-light">Extraordinary</span>.</h1>
+            <h1 class="text-5xl md:text-8xl luxury-serif leading-tight mb-6 uppercase tracking-tighter">Dubai <br> <span class="text-[#d4af37] italic font-light">Luxury</span> Drive.</h1>
             <p class="text-gray-300 text-lg font-light tracking-wide mb-10 max-w-md">
-                Experience the pinnacle of automotive luxury. Exclusive rentals for those who value excellence.
+                Experience the pinnacle of automotive luxury in Dubai. Exclusive rentals for those who value excellence.
             </p>
             
             <div class="flex items-center space-x-8">
@@ -51,7 +59,7 @@
         </div>
     </section>
 
-    <!-- FLEET SECTION (3 CARS GRID) -->
+    <!-- FLEET SECTION -->
     <section id="fleet" class="py-32 px-6 md:px-16 bg-[#050505]">
         <div class="text-center mb-24">
             <p class="text-[#d4af37] text-xs tracking-[0.5em] uppercase mb-4 font-semibold">Elite Collection</p>
@@ -65,33 +73,33 @@
                     <img src="car333.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
                 </div>
                 <div class="px-2 pb-4 text-center">
-                    <h3 class="text-2xl luxury-serif italic mb-1">Supercar Model X</h3>
+                    <h3 class="text-2xl luxury-serif italic mb-1 uppercase">Supercar Model X</h3>
                     <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-4">V12 Performance</p>
                     <div class="text-[#d4af37] text-xl font-light mb-6">$750 <small class="text-gray-600 text-[10px]">/ DAY</small></div>
                     <button class="w-full py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] font-bold border border-white/5">Inquiry Now</button>
                 </div>
             </div>
 
-            <!-- Car 2: car111.png -->
+            <!-- Car 2: car222.png (McLaren 720 S Gray) -->
             <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500 border-[#d4af37]/20">
                 <div class="relative overflow-hidden rounded-2xl mb-8">
-                    <img src="car111.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
+                    <img src="car222.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
                 </div>
                 <div class="px-2 pb-4 text-center">
-                    <h3 class="text-2xl luxury-serif italic mb-1">Luxury Cruiser</h3>
+                    <h3 class="text-2xl luxury-serif italic mb-1 uppercase">McLaren 720 S Gray</h3>
                     <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-4">Prestige Line</p>
-                    <div class="text-[#d4af37] text-xl font-light mb-6">$900 <small class="text-gray-600 text-[10px]">/ DAY</small></div>
+                    <div class="text-[#d4af37] text-xl font-light mb-6">$950 <small class="text-gray-600 text-[10px]">/ DAY</small></div>
                     <button class="w-full py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] font-bold border border-white/5">Inquiry Now</button>
                 </div>
             </div>
 
-            <!-- Car 3: car444.png -->
+            <!-- Car 3: car444.png (Mercedes G63 Black) -->
             <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500">
                 <div class="relative overflow-hidden rounded-2xl mb-8">
                     <img src="car444.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
                 </div>
                 <div class="px-2 pb-4 text-center">
-                    <h3 class="text-2xl luxury-serif italic mb-1">Elite Sport</h3>
+                    <h3 class="text-2xl luxury-serif italic mb-1 uppercase">Mercedes G63 Black</h3>
                     <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-4">Limited Edition</p>
                     <div class="text-[#d4af37] text-xl font-light mb-6">$1200 <small class="text-gray-600 text-[10px]">/ DAY</small></div>
                     <button class="w-full py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] font-bold border border-white/5">Inquiry Now</button>
@@ -133,15 +141,15 @@
 
     <!-- Footer -->
     <footer class="py-20 px-6 md:px-16 flex flex-col items-center text-center border-t border-white/5">
-        <!-- Logo Updated to logo.jpg -->
-        <img src="logo.jpg" alt="Logo" class="h-16 mb-10 opacity-80">
+        <img src="logo.jpg" alt="Logo" class="h-20 w-20 mb-10 logo-style opacity-90">
         <div class="flex space-x-8 text-[10px] tracking-[0.3em] text-gray-500 uppercase mb-10 font-light">
-            <a href="#" class="hover:text-[#d4af37] transition">Instagram</a>
+            <!-- Instagram Link Updated -->
+            <a href="https://www.instagram.com/dubai_drive_luxury/" target="_blank" class="hover:text-[#d4af37] transition">Instagram</a>
             <a href="#" class="hover:text-[#d4af37] transition">WhatsApp</a>
             <a href="#" class="hover:text-[#d4af37] transition">Contact</a>
         </div>
         <div class="text-[9px] tracking-[0.4em] text-gray-700 uppercase">
-            &copy; 2024 ELITE DRIVE. LUXURY CAR RENTAL.
+            &copy; 2024 DUBAI DRIVE LUXURY. ALL RIGHTS RESERVED.
         </div>
     </footer>
 
