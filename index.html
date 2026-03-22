@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai Drive Luxury | CAR RENTAL IN DUBAI</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -15,6 +14,27 @@
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%); }
         
+        /* Animation Pulse bach t-khtef l-3in */
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .promo-badge {
+            animation: pulse-gold 2s infinite;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: black;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 30;
+        }
+
         .logo-container {
             width: 70px;
             height: 70px;
@@ -26,11 +46,7 @@
             justify-content: center;
             background: #000;
         }
-        .logo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .logo-container img { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
@@ -50,7 +66,6 @@
         </div>
         
         <div class="flex items-center space-x-6">
-            <!-- Instagram Icon Top -->
             <a href="https://www.instagram.com/dubai_drive_luxury/" target="_blank" class="text-white hover:text-[#d4af37] transition text-lg">
                 <i class="fa-brands fa-instagram"></i>
             </a>
@@ -65,6 +80,8 @@
 
         <div class="relative z-20 px-6 md:px-24 max-w-5xl">
             <div class="border-l-2 border-[#d4af37] pl-8">
+                <!-- Marketing Callout -->
+                <p class="text-[#d4af37] text-xs tracking-[0.5em] mb-4 font-bold uppercase">Limited Time Offer: $1 / Day</p>
                 <h1 class="text-5xl md:text-8xl luxury-serif leading-tight mb-2 uppercase tracking-tighter">
                     Dubai Drive <br> <span class="text-[#d4af37] italic font-light">Luxury</span>
                 </h1>
@@ -81,7 +98,7 @@
         </div>
     </section>
 
-    <!-- NEW USP BAR (Dubai, Deals, VIP) -->
+    <!-- USP BAR -->
     <div class="bg-[#0a0a0a] border-y border-white/5 py-8 px-6 md:px-16 flex flex-wrap justify-center gap-8 md:gap-20 text-[10px] tracking-[0.3em] uppercase text-gray-400 font-light">
         <div class="flex items-center gap-3"><span class="text-[#d4af37] text-lg">✦</span> Dubai, UAE</div>
         <div class="flex items-center gap-3"><span class="text-[#d4af37] text-lg">✦</span> Daily • Weekly • Monthly Deals</div>
@@ -96,41 +113,47 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- Car 1: car111.png -->
-            <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500">
+            <!-- Car 1 -->
+            <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500 relative">
+                <!-- Marketing Badge -->
+                <div class="promo-badge">SPECIAL: $1/DAY</div>
                 <div class="relative overflow-hidden rounded-2xl mb-8">
                     <img src="car111.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
                 </div>
                 <div class="px-2 pb-4 text-center">
                     <h3 class="text-2xl luxury-serif italic mb-1 uppercase">Supercar Model X</h3>
                     <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-4">V12 Performance</p>
-                    <div class="text-[#d4af37] text-xl font-light mb-6">1 USD <small class="text-gray-600 text-[10px]">/ DAY</small></div>
+                    <div class="text-[#d4af37] text-xl font-light mb-6 uppercase tracking-widest">From $1 <small class="text-gray-600 text-[10px]">/ Day</small></div>
                     <a href="https://wa.me/212605785321" target="_blank" class="block w-full py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] font-bold border border-white/5 text-center">Inquiry Now</a>
                 </div>
             </div>
 
-            <!-- Car 2: car333.png (McLaren 720 S Gray) -->
-            <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500 border-[#d4af37]/20">
+            <!-- Car 2 -->
+            <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500 border-[#d4af37]/20 relative">
+                <!-- Marketing Badge -->
+                <div class="promo-badge">SPECIAL: $1/DAY</div>
                 <div class="relative overflow-hidden rounded-2xl mb-8">
                     <img src="car333.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
                 </div>
                 <div class="px-2 pb-4 text-center">
                     <h3 class="text-2xl luxury-serif italic mb-1 uppercase">McLaren 720 S Gray</h3>
                     <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-4">Prestige Line</p>
-                    <div class="text-[#d4af37] text-xl font-light mb-6">1 USD <small class="text-gray-600 text-[10px]">/ DAY</small></div>
+                    <div class="text-[#d4af37] text-xl font-light mb-6 uppercase tracking-widest">From $1 <small class="text-gray-600 text-[10px]">/ Day</small></div>
                     <a href="https://wa.me/212605785321" target="_blank" class="block w-full py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] font-bold border border-white/5 text-center">Inquiry Now</a>
                 </div>
             </div>
 
-            <!-- Car 3: car444.png (Mercedes G63 Black) -->
-            <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500">
+            <!-- Car 3 -->
+            <div class="glass group p-5 rounded-3xl hover:border-[#d4af37]/30 transition duration-500 relative">
+                <!-- Marketing Badge -->
+                <div class="promo-badge">SPECIAL: $1/DAY</div>
                 <div class="relative overflow-hidden rounded-2xl mb-8">
                     <img src="car444.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000">
                 </div>
                 <div class="px-2 pb-4 text-center">
                     <h3 class="text-2xl luxury-serif italic mb-1 uppercase">Mercedes G63 Black</h3>
                     <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-4">Limited Edition</p>
-                    <div class="text-[#d4af37] text-xl font-light mb-6">1 USD <small class="text-gray-600 text-[10px]">/ DAY</small></div>
+                    <div class="text-[#d4af37] text-xl font-light mb-6 uppercase tracking-widest">From $1 <small class="text-gray-600 text-[10px]">/ Day</small></div>
                     <a href="https://wa.me/212605785321" target="_blank" class="block w-full py-4 bg-white/5 hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] font-bold border border-white/5 text-center">Inquiry Now</a>
                 </div>
             </div>
