@@ -14,7 +14,6 @@
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%); }
         
-        /* Floating Instagram Button */
         .float-insta {
             position: fixed;
             bottom: 30px;
@@ -31,7 +30,6 @@
         }
         .float-insta:hover { transform: scale(1.1); }
 
-        /* No Deposit Tag Style */
         .no-deposit-tag {
             display: inline-flex;
             align-items: center;
@@ -87,7 +85,6 @@
         <div class="absolute inset-0 hero-overlay z-10"></div>
 
         <div class="relative z-20 px-6 md:px-24 max-w-5xl">
-            <!-- NO DEPOSIT TAG -->
             <div class="no-deposit-tag">
                 <span class="w-2 h-2 bg-[#d4af37] rounded-full animate-ping mr-3"></span>
                 <span class="text-[9px] tracking-[0.4em] text-[#d4af37] font-bold uppercase">NO DEPOSIT REQUIRED</span>
@@ -166,25 +163,45 @@
         </div>
     </section>
 
-    <!-- REVIEWS SECTION -->
-    <section class="py-24 px-6 md:px-16 bg-black border-t border-white/5">
+    <!-- REVIEWS SECTION (POWERFUL & LOGICAL) -->
+    <section class="py-32 px-6 md:px-16 bg-black border-t border-white/5">
+        <div class="text-center mb-20">
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                <i class="fab fa-google text-white text-xl"></i>
+                <span class="text-[10px] tracking-[0.4em] uppercase text-gray-400">Google Rating 5.0/5.0</span>
+            </div>
+            <h2 class="text-3xl luxury-serif italic">Trusted by Global Elite</h2>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <!-- Review 1 -->
             <div class="text-center">
-                <div class="text-[#d4af37] mb-4 text-xs italic">"Best rental experience in Dubai. No deposit and the G63 was brand new. Highly recommended!"</div>
-                <p class="text-[9px] tracking-[0.3em] text-gray-500 uppercase">— James W.</p>
+                <div class="flex justify-center mb-4 text-[#d4af37] text-[10px] space-x-1">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="text-white mb-6 text-sm italic font-light leading-relaxed">"Best rental experience in Dubai. No deposit and the G63 was brand new. Highly recommended!"</div>
+                <p class="text-[9px] tracking-[0.3em] text-gray-500 uppercase">— James W. <span class="text-green-500 ml-2"><i class="fas fa-check-circle"></i> Verified</span></p>
             </div>
+            <!-- Review 2 -->
             <div class="text-center">
-                <div class="text-[#d4af37] mb-4 text-xs italic">"Professional service from start to finish. The McLaren 720S was delivered right to my hotel."</div>
-                <p class="text-[9px] tracking-[0.3em] text-gray-500 uppercase">— Sarah M.</p>
+                <div class="flex justify-center mb-4 text-[#d4af37] text-[10px] space-x-1">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="text-white mb-6 text-sm italic font-light leading-relaxed">"Professional service from start to finish. The McLaren 720S was delivered right to my hotel on time."</div>
+                <p class="text-[9px] tracking-[0.3em] text-gray-500 uppercase">— Sarah M. <span class="text-green-500 ml-2"><i class="fas fa-check-circle"></i> Verified</span></p>
             </div>
+            <!-- Review 3 -->
             <div class="text-center">
-                <div class="text-[#d4af37] mb-4 text-xs italic">"Unbeatable prices and top-tier cars. The only place I rent from when I'm in the UAE."</div>
-                <p class="text-[9px] tracking-[0.3em] text-gray-500 uppercase">— Ahmed K.</p>
+                <div class="flex justify-center mb-4 text-[#d4af37] text-[10px] space-x-1">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="text-white mb-6 text-sm italic font-light leading-relaxed">"Unbeatable prices and top-tier cars. The only place I rent from when I'm in the UAE. 24/7 support is amazing."</div>
+                <p class="text-[9px] tracking-[0.3em] text-gray-500 uppercase">— Ahmed K. <span class="text-green-500 ml-2"><i class="fas fa-check-circle"></i> Verified</span></p>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- BESPOKE SERVICES (LOGICAL) -->
     <section id="services" class="bg-[#080808] py-32 px-6 md:px-16 border-y border-white/5">
         <div class="flex flex-col items-center text-center mb-24">
             <h2 class="text-4xl md:text-5xl luxury-serif italic mb-6 uppercase tracking-widest">Bespoke Services</h2>
@@ -194,23 +211,23 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-16 text-center">
             <div class="group">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">01</div>
-                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Chauffeur</h4>
-                <p class="text-gray-500 text-xs leading-relaxed font-light px-4">Professional drivers at your service for a seamless experience.</p>
+                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Elite Chauffeur</h4>
+                <p class="text-gray-500 text-xs leading-relaxed font-light px-4 italic">Multilingual, discreet, and professional drivers for your city tours.</p>
             </div>
             <div class="group">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">02</div>
-                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">VIP Airport</h4>
-                <p class="text-gray-500 text-xs leading-relaxed font-light px-4">Direct tarmac pick-up and drop-off in total privacy.</p>
+                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Tarmac VIP</h4>
+                <p class="text-gray-500 text-xs leading-relaxed font-light px-4 italic">Direct airport pick-up from the private jet terminal to your hotel.</p>
             </div>
             <div class="group">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">03</div>
                 <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Luxury Events</h4>
-                <p class="text-gray-500 text-xs leading-relaxed font-light px-4">Weddings, corporate arrivals, and red carpet events.</p>
+                <p class="text-gray-500 text-xs leading-relaxed font-light px-4 italic">Exclusive fleet for weddings, corporate galas, and red carpets.</p>
             </div>
             <div class="group">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">04</div>
                 <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">24/7 Concierge</h4>
-                <p class="text-gray-500 text-xs leading-relaxed font-light px-4">Personalized support for all your luxury travel needs.</p>
+                <p class="text-gray-500 text-xs leading-relaxed font-light px-4 italic">Round-the-clock support for customized travel and car needs.</p>
             </div>
         </div>
     </section>
