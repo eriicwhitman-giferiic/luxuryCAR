@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai Drive Luxury | CAR RENTAL IN DUBAI</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Luxury Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
 
     <style>
@@ -21,24 +17,33 @@
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-overlay { background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%); }
         
-        /* SIMPLE LUXURY PRELOADER */
+        /* LUXURY SMOKE PRELOADER */
         #preloader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #000; display: flex; align-items: center; justify-content: center;
-            z-index: 9999; transition: opacity 1.2s ease-in-out, visibility 1.2s;
+            z-index: 9999; transition: opacity 1.5s ease-in-out, visibility 1.5s;
+        }
+        .smoke-wrap {
+            position: absolute; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(40,40,40,0.4), transparent 70%);
+            filter: blur(80px);
+            animation: smoke-move 10s infinite alternate;
+        }
+        @keyframes smoke-move {
+            0% { transform: translate(-10%, -10%) scale(1); opacity: 0.3; }
+            100% { transform: translate(10%, 10%) scale(1.2); opacity: 0.6; }
         }
         #preloader img { 
-            width: 280px; 
-            opacity: 0;
-            animation: simple-fade 3s ease-in-out forwards; 
+            width: 300px; position: relative; z-index: 10;
+            opacity: 0; animation: simple-fade 3.5s ease-in-out forwards; 
         }
         @keyframes simple-fade {
-            0% { opacity: 0; transform: scale(0.95); }
-            50% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0; transform: scale(1.02); }
+            0% { opacity: 0; transform: scale(0.9); filter: blur(10px); }
+            40% { opacity: 1; transform: scale(1); filter: blur(0px); }
+            80% { opacity: 1; transform: scale(1.02); filter: blur(0px); }
+            100% { opacity: 0; transform: scale(1.05); filter: blur(5px); }
         }
 
-        /* PARALLAX SIGNATURE */
         .parallax-section {
             height: 65vh; background-image: url('any.png'); background-attachment: fixed;
             background-position: center; background-repeat: no-repeat; background-size: cover;
@@ -46,15 +51,11 @@
         }
         .parallax-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.75); }
 
-        /* FLOATING INSTA */
         .float-insta {
             position: fixed; bottom: 30px; right: 30px; z-index: 100;
             width: 55px; height: 55px; display: flex; align-items: center; justify-content: center;
             border-radius: 50%; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); transition: 0.3s ease;
         }
-        .float-insta:hover { transform: translateY(-5px); }
-
-        /* LOGO CONTAINER */
         .logo-container {
             width: 65px; height: 65px; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.2);
             overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000;
@@ -64,8 +65,11 @@
 </head>
 <body>
 
-    <!-- PRELOADER -->
-    <div id="preloader"><img src="any.png" alt="DDL Intro"></div>
+    <!-- PRELOADER WITH SMOKE -->
+    <div id="preloader">
+        <div class="smoke-wrap"></div>
+        <img src="any.png" alt="DDL Intro">
+    </div>
 
     <!-- FLOATING INSTAGRAM -->
     <a href="https://www.instagram.com/dubai_drive_luxury/" target="_blank" class="float-insta gold-gradient">
@@ -85,7 +89,7 @@
             <a href="#services" class="hover:text-[#d4af37] transition">Our Services</a>
             <a href="#faq" class="hover:text-[#d4af37] transition">FAQ</a>
         </div>
-        <a href="https://wa.me/212605785321" target="_blank" class="gold-gradient px-8 py-2.5 text-black text-[9px] font-bold tracking-[0.2em] rounded-sm">WHATSAPP</a>
+        <a href="https://wa.me/212605785321" target="_blank" class="gold-gradient px-8 py-2.5 text-black text-[9px] font-bold tracking-[0.2em] rounded-sm uppercase">WhatsApp Us</a>
     </nav>
 
     <!-- HERO SECTION -->
@@ -118,12 +122,12 @@
     <section id="fleet" class="py-32 px-6 md:px-16 bg-[#050505]">
         <div class="text-center mb-24" data-aos="fade-up">
             <p class="text-[#d4af37] text-xs tracking-[0.6em] uppercase mb-4 font-semibold">Elite Collection</p>
-            <h2 class="text-4xl md:text-6xl luxury-serif italic text-white uppercase">Masterpieces on Wheels</h2>
+            <h2 class="text-4xl md:text-6xl luxury-serif italic text-white uppercase leading-tight">Masterpieces on Wheels</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <!-- Car 1 -->
             <div class="glass group p-6 rounded-3xl relative" data-aos="fade-up" data-aos-delay="100">
-                <div class="absolute top-6 left-6 bg-[#d4af37] text-black text-[9px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest">1 USD / DAY</div>
+                <div class="absolute top-6 left-6 bg-[#d4af37] text-black text-[9px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest shadow-xl">1 USD / DAY</div>
                 <div class="relative overflow-hidden rounded-2xl mb-8"><img src="car111.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000"></div>
                 <div class="px-2 pb-4 text-center">
                     <h3 class="text-2xl luxury-serif italic mb-1 uppercase">Supercar Model X</h3>
@@ -133,7 +137,7 @@
             </div>
             <!-- Car 2 -->
             <div class="glass group p-6 rounded-3xl relative border-[#d4af37]/20 shadow-2xl shadow-[#d4af37]/5" data-aos="fade-up" data-aos-delay="300">
-                <div class="absolute top-6 left-6 bg-[#d4af37] text-black text-[9px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest">1 USD / DAY</div>
+                <div class="absolute top-6 left-6 bg-[#d4af37] text-black text-[9px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest shadow-xl">1 USD / DAY</div>
                 <div class="relative overflow-hidden rounded-2xl mb-8"><img src="car333.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000"></div>
                 <div class="px-2 pb-4 text-center">
                     <h3 class="text-2xl luxury-serif italic mb-1 uppercase">McLaren 720 S Gray</h3>
@@ -143,7 +147,7 @@
             </div>
             <!-- Car 3 -->
             <div class="glass group p-6 rounded-3xl relative" data-aos="fade-up" data-aos-delay="500">
-                <div class="absolute top-6 left-6 bg-[#d4af37] text-black text-[9px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest">1 USD / DAY</div>
+                <div class="absolute top-6 left-6 bg-[#d4af37] text-black text-[9px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest shadow-xl">1 USD / DAY</div>
                 <div class="relative overflow-hidden rounded-2xl mb-8"><img src="car444.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-1000"></div>
                 <div class="px-2 pb-4 text-center">
                     <h3 class="text-2xl luxury-serif italic mb-1 uppercase">Mercedes G63 Black</h3>
@@ -163,88 +167,60 @@
         </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section class="py-32 px-6 md:px-16 bg-black border-t border-white/5 text-center">
-        <div class="mb-20" data-aos="fade-up">
-            <div class="flex justify-center items-center space-x-3 mb-6">
-                <i class="fab fa-google text-white text-xl"></i>
-                <span class="text-[10px] tracking-[0.5em] uppercase text-gray-500">Google Rating 5.0/5.0</span>
-            </div>
-            <h2 class="text-3xl luxury-serif italic">Trusted by Global Elite</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
-            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="flex justify-center mb-6 text-[#d4af37] text-[10px] space-x-1.5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <div class="text-white mb-8 text-sm italic font-light leading-relaxed opacity-90">"Best rental experience in Dubai. No deposit and the G63 was brand new. Highly recommended!"</div>
-                <p class="text-[9px] tracking-[0.4em] text-gray-600 uppercase">— James W. <span class="text-green-600 ml-2 font-bold">Verified</span></p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex justify-center mb-6 text-[#d4af37] text-[10px] space-x-1.5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <div class="text-white mb-8 text-sm italic font-light leading-relaxed opacity-90">"Professional service from start to finish. The McLaren 720S was delivered on time to my hotel."</div>
-                <p class="text-[9px] tracking-[0.4em] text-gray-600 uppercase">— Sarah M. <span class="text-green-600 ml-2 font-bold">Verified</span></p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-                <div class="flex justify-center mb-6 text-[#d4af37] text-[10px] space-x-1.5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <div class="text-white mb-8 text-sm italic font-light leading-relaxed opacity-90">"Unbeatable prices and top-tier cars. The only place I rent from in the UAE. 24/7 support."</div>
-                <p class="text-[9px] tracking-[0.4em] text-gray-600 uppercase">— Ahmed K. <span class="text-green-600 ml-2 font-bold">Verified</span></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-32 px-6 md:px-16 bg-[#050505] border-y border-white/5">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl luxury-serif italic text-center mb-20" data-aos="fade-up">Frequently Asked Questions</h2>
-            <div class="space-y-10" data-aos="fade-up">
-                <div class="border-b border-white/5 pb-6">
-                    <h4 class="text-[11px] tracking-[0.3em] uppercase mb-3 text-[#d4af37] font-semibold">Do you require a security deposit?</h4>
-                    <p class="text-gray-500 text-xs font-light leading-relaxed">No, we offer a "No Deposit" policy for our elite fleet to ensure a seamless and trust-based experience.</p>
-                </div>
-                <div class="border-b border-white/5 pb-6">
-                    <h4 class="text-[11px] tracking-[0.3em] uppercase mb-3 text-[#d4af37] font-semibold">Is delivery free within Dubai?</h4>
-                    <p class="text-gray-500 text-xs font-light leading-relaxed">Yes, we provide complimentary delivery and pick-up anywhere in Dubai, including DXB Airport and private jet terminals.</p>
-                </div>
-                <div class="border-b border-white/5 pb-6">
-                    <h4 class="text-[11px] tracking-[0.3em] uppercase mb-3 text-[#d4af37] font-semibold">What payment methods do you accept?</h4>
-                    <p class="text-gray-500 text-xs font-light leading-relaxed">We accept Cash, Credit Cards, and all major Cryptocurrencies (BTC, ETH, USDT) for your convenience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="bg-[#080808] py-32 px-6 md:px-16">
+    <!-- BESPOKE SERVICES (UPDATED LOGIC) -->
+    <section id="services" class="bg-[#080808] py-32 px-6 md:px-16 border-y border-white/5">
         <div class="flex flex-col items-center text-center mb-24" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl luxury-serif italic mb-6 uppercase tracking-widest">Bespoke Services</h2>
+            <h2 class="text-4xl md:text-5xl luxury-serif italic mb-6 uppercase tracking-[0.3em]">Bespoke Services</h2>
             <div class="w-24 h-[1px] bg-[#d4af37]"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-16 text-center">
             <div class="group" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">01</div>
                 <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Elite Chauffeur</h4>
-                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Multilingual and professional drivers for your city tours.</p>
+                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Multilingual, discreet, and professional drivers for your city tours.</p>
             </div>
             <div class="group" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">02</div>
-                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Tarmac VIP</h4>
-                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Direct airport pick-up from the private jet terminal.</p>
+                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Airport VIP</h4>
+                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Direct meet & greet from the private jet terminal to your destination.</p>
             </div>
             <div class="group" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">03</div>
-                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Luxury Events</h4>
-                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Exclusive fleet for weddings and corporate arrivals.</p>
+                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Corporate & Events</h4>
+                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Exclusive fleet management for weddings and high-end business galas.</p>
             </div>
             <div class="group" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-[#d4af37] mb-8 text-3xl font-light italic luxury-serif">04</div>
-                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">24/7 Concierge</h4>
-                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Round-the-clock support for all your travel needs.</p>
+                <h4 class="text-[11px] tracking-[0.4em] uppercase mb-4 font-semibold">Global Concierge</h4>
+                <p class="text-gray-600 text-[11px] leading-relaxed font-light px-4 italic">Round-the-clock lifestyle support for all your luxury travel needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-32 px-6 md:px-16 bg-black">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl luxury-serif italic text-center mb-20" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="space-y-10" data-aos="fade-up">
+                <div class="border-b border-white/5 pb-6">
+                    <h4 class="text-[11px] tracking-[0.3em] uppercase mb-3 text-[#d4af37] font-semibold">Do you require a security deposit?</h4>
+                    <p class="text-gray-500 text-xs font-light leading-relaxed">No, we offer a "No Deposit" policy for our elite fleet to ensure a seamless experience.</p>
+                </div>
+                <div class="border-b border-white/5 pb-6">
+                    <h4 class="text-[11px] tracking-[0.3em] uppercase mb-3 text-[#d4af37] font-semibold">Is delivery free within Dubai?</h4>
+                    <p class="text-gray-500 text-xs font-light leading-relaxed">Yes, we provide complimentary delivery and pick-up anywhere in Dubai, including DXB Airport.</p>
+                </div>
+                <div class="border-b border-white/5 pb-6">
+                    <h4 class="text-[11px] tracking-[0.3em] uppercase mb-3 text-[#d4af37] font-semibold">What payment methods do you accept?</h4>
+                    <p class="text-gray-500 text-xs font-light leading-relaxed">We accept Cash, Credit Cards, and all major Cryptocurrencies (BTC, ETH, USDT).</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="py-24 px-6 md:px-16 flex flex-col items-center text-center border-t border-white/5 bg-black">
-        <div class="logo-container mb-12 opacity-90"><img src="logo.png" alt="Logo"></div>
+        <div class="logo-container mb-12 opacity-90 shadow-2xl shadow-[#d4af37]/10"><img src="logo.png" alt="Logo"></div>
         <div class="flex space-x-12 text-[10px] tracking-[0.4em] text-gray-500 uppercase mb-12 font-light">
             <a href="https://www.instagram.com/dubai_drive_luxury/" target="_blank" class="hover:text-[#d4af37] transition">Instagram</a>
             <a href="https://wa.me/212605785321" target="_blank" class="hover:text-[#d4af37] transition">WhatsApp</a>
@@ -258,16 +234,13 @@
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Init AOS
         AOS.init({ duration: 1200, once: true, offset: 100 });
-
-        // Preloader Logic
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const preloader = document.getElementById('preloader');
                 preloader.style.opacity = '0';
-                setTimeout(() => { preloader.style.visibility = 'hidden'; }, 1200);
-            }, 2500);
+                setTimeout(() => { preloader.style.visibility = 'hidden'; }, 1500);
+            }, 3000); // 3 seconds intro
         });
     </script>
 </body>
